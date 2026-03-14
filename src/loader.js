@@ -8,14 +8,22 @@ const DATA_DIR = path.join(__dirname, "..", "data", "categories");
  * @returns {Array} array of category objects
  */
 function loadCategories() {
-  const indexPath = path.join(DATA_DIR, "index.json");
-  const order = JSON.parse(fs.readFileSync(indexPath, "utf8"));
+  const order = getCategoryIds();
 
   return order.map((id) => {
     const filePath = path.join(DATA_DIR, `${id}.json`);
     const raw = fs.readFileSync(filePath, "utf8");
     return JSON.parse(raw);
   });
+}
+
+/**
+ * Load category IDs from index.json
+ * @returns {string[]} category IDs in display order
+ */
+function getCategoryIds() {
+  const indexPath = path.join(DATA_DIR, "index.json");
+  return JSON.parse(fs.readFileSync(indexPath, "utf8"));
 }
 
 /**
@@ -85,4 +93,4 @@ function validateCategory(category) {
   return { valid: errors.length === 0, errors };
 }
 
-module.exports = { loadCategories, loadCategory, getAllExtensions, validateCategory };
+module.exports = { loadCategories, loadCategory, getCategoryIds, getAllExtensions, validateCategory };

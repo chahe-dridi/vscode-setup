@@ -2,7 +2,7 @@
 
 "use strict";
 
-const { loadCategories, loadCategory } = require("./src/loader");
+const { loadCategories, loadCategory, getCategoryIds } = require("./src/loader");
 const { isCodeAvailable, getCodeInstallInstructions, installExtensions, generateExtensionsJson } = require("./src/installer");
 const { banner, divider, printCategories, printExtensions, printInstallProgress, printInstallStart, printSummary, printNoCodeWarning, c } = require("./src/display");
 const { createRL, ask, parseSelection } = require("./src/prompt");
@@ -46,8 +46,9 @@ async function run() {
       selectedCategories = [cat];
       console.log(`${c.cyan}  Category: ${cat.label}${c.reset}\n`);
     } catch {
+      const validIds = getCategoryIds().join(", ");
       console.log(`${c.red}  Unknown category: "${flags.category}"${c.reset}`);
-      console.log(`  Valid IDs: essential, themes, fun, ai, webdev, python, devtools\n`);
+      console.log(`  Valid IDs: ${validIds}\n`);
       rl.close();
       process.exit(1);
     }
