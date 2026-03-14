@@ -33,7 +33,7 @@ function divider() {
 
 function printCategories(categories) {
   categories.forEach((cat, i) => {
-    console.log(`  ${c.cyan}${i + 1}${c.reset}. ${cat.label}`);
+    console.log(`  ${c.cyan}${i + 1}${c.reset}. ${cat.label} - ${cat.extensions.length} extensions`);
     console.log(`     ${c.dim}${cat.description}${c.reset}`);
   });
   console.log(`\n  ${c.cyan}a${c.reset}. All categories`);
