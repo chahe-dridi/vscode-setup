@@ -1,0 +1,55 @@
+{
+  "id": "ai",
+  "label": "🧠 AI & Productivity",
+  "description": "Code smarter and faster with AI assistance and productivity boosters",
+  "extensions": [
+    {
+      "id": "GitHub.copilot",
+      "name": "GitHub Copilot",
+      "description": "AI pair programmer. Suggests entire lines and functions as you type. Paid subscription.",
+      "tags": ["ai", "autocomplete"]
+    },
+    {
+      "id": "GitHub.copilot-chat",
+      "name": "GitHub Copilot Chat",
+      "description": "Chat with AI about your code directly inside VS Code. Ask questions, refactor, explain.",
+      "tags": ["ai", "chat"]
+    },
+    {
+      "id": "Codeium.codeium",
+      "name": "Codeium",
+      "description": "Free AI code completion. Works like Copilot but completely free — no subscription.",
+      "tags": ["ai", "free", "autocomplete"]
+    },
+    {
+      "id": "alefragnani.bookmarks",
+      "name": "Bookmarks",
+      "description": "Mark lines in your code and jump between them instantly with keyboard shortcuts.",
+      "tags": ["productivity", "navigation"]
+    },
+    {
+      "id": "wayou.vscode-todo-highlight",
+      "name": "TODO Highlight",
+      "description": "Highlights TODO and FIXME comments so you never forget unfinished work.",
+      "tags": ["productivity"]
+    },
+    {
+      "id": "Gruntfuggly.todo-tree",
+      "name": "Todo Tree",
+      "description": "Shows all your TODOs in a sidebar tree so you can find every task across the project.",
+      "tags": ["productivity"]
+    },
+    {
+      "id": "wix.vscode-import-cost",
+      "name": "Import Cost",
+      "description": "Shows the file size of each import inline. Keep your JavaScript bundles lean.",
+      "tags": ["performance", "js"]
+    },
+    {
+      "id": "naumovs.color-highlight",
+      "name": "Color Highlight",
+      "description": "Shows a colored square next to every hex/RGB color value in your CSS and JS files.",
+      "tags": ["productivity", "css"]
+    }
+  ]
+}

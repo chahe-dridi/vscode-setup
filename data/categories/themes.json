@@ -1,0 +1,55 @@
+{
+  "id": "themes",
+  "label": "🎨 Themes & Appearance",
+  "description": "Make VS Code look exactly how you want it",
+  "extensions": [
+    {
+      "id": "GitHub.github-vscode-theme",
+      "name": "GitHub Theme",
+      "description": "The official GitHub dark and light themes. Clean and very familiar.",
+      "tags": ["theme"]
+    },
+    {
+      "id": "dracula-theme.theme-dracula",
+      "name": "Dracula Official",
+      "description": "The legendary dark theme used by millions of developers worldwide.",
+      "tags": ["theme"]
+    },
+    {
+      "id": "enkia.tokyo-night",
+      "name": "Tokyo Night",
+      "description": "A dark elegant theme inspired by Tokyo at night. Very popular in the community.",
+      "tags": ["theme"]
+    },
+    {
+      "id": "sdras.night-owl",
+      "name": "Night Owl",
+      "description": "Designed for night-owl developers. Perfect contrast, easy on eyes.",
+      "tags": ["theme"]
+    },
+    {
+      "id": "PKief.material-icon-theme",
+      "name": "Material Icon Theme",
+      "description": "Adds beautiful icons to every file type and folder in the explorer.",
+      "tags": ["icons"]
+    },
+    {
+      "id": "vscode-icons-team.vscode-icons",
+      "name": "VSCode Icons",
+      "description": "Over 1000 icons for files and folders — a great alternative to Material Icons.",
+      "tags": ["icons"]
+    },
+    {
+      "id": "be5invis.vscode-custom-css",
+      "name": "Custom CSS & JS Loader",
+      "description": "Apply custom CSS to VS Code itself — change fonts, add blur effects, make it truly yours.",
+      "tags": ["customization"]
+    },
+    {
+      "id": "johnpapa.vscode-peacock",
+      "name": "Peacock",
+      "description": "Colors each VS Code window differently per project. Essential when juggling multiple repos.",
+      "tags": ["customization"]
+    }
+  ]
+}

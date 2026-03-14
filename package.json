@@ -1,0 +1,41 @@
+{
+  "name": "vscode-setup",
+  "version": "1.0.0",
+  "description": "Interactive CLI to discover and install the best VS Code extensions — themes, pets, Discord presence, AI tools, and more",
+  "main": "index.js",
+  "bin": {
+    "vscode-setup": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node src/test-runner.js",
+    "lint": "node --check index.js src/loader.js src/installer.js src/display.js src/prompt.js src/args.js",
+    "list": "node index.js --list",
+    "list:json": "node index.js --list --json",
+    "github:setup": "node scripts/github-setup.js"
+  },
+  "keywords": [
+    "vscode",
+    "extensions",
+    "setup",
+    "developer-tools",
+    "cli",
+    "productivity",
+    "themes",
+    "discord-presence",
+    "vscode-pets"
+  ],
+  "author": "chahe-dridi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chahe-dridi/vscode-setup.git"
+  },
+  "homepage": "https://github.com/chahe-dridi/vscode-setup#readme",
+  "bugs": {
+    "url": "https://github.com/chahe-dridi/vscode-setup/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

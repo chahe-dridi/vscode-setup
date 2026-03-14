@@ -1,0 +1,43 @@
+{
+  "id": "devtools",
+  "label": "🔧 Dev Tools & Utilities",
+  "description": "Docker, databases, SSH, and essential developer utilities",
+  "extensions": [
+    {
+      "id": "ms-vscode-remote.remote-ssh",
+      "name": "Remote SSH",
+      "description": "Edit files on any remote server over SSH, as if they were local on your machine.",
+      "tags": ["remote", "ssh"]
+    },
+    {
+      "id": "ms-azuretools.vscode-docker",
+      "name": "Docker",
+      "description": "Manage Docker containers, images, and compose files directly from VS Code.",
+      "tags": ["docker", "devops"]
+    },
+    {
+      "id": "cweijan.vscode-database-client2",
+      "name": "Database Client",
+      "description": "Connect to MySQL, PostgreSQL, MongoDB, Redis and more — all inside VS Code.",
+      "tags": ["database"]
+    },
+    {
+      "id": "ms-vscode.hexeditor",
+      "name": "Hex Editor",
+      "description": "Inspect and edit binary files using a hex editor view inside VS Code.",
+      "tags": ["utility"]
+    },
+    {
+      "id": "ms-vscode-remote.vscode-remote-extensionpack",
+      "name": "Remote Development",
+      "description": "Full remote development pack — SSH, WSL, and Dev Containers in one install.",
+      "tags": ["remote", "wsl", "containers"]
+    },
+    {
+      "id": "redhat.vscode-yaml",
+      "name": "YAML",
+      "description": "Full YAML language support with validation, schema detection, and formatting.",
+      "tags": ["yaml", "devops"]
+    }
+  ]
+}

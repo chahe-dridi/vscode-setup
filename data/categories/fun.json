@@ -1,0 +1,49 @@
+{
+  "id": "fun",
+  "label": "🐾 Fun & Personality",
+  "description": "Make your editor fun, unique, and expressive",
+  "extensions": [
+    {
+      "id": "tonybaloney.vscode-pets",
+      "name": "VS Code Pets",
+      "description": "Adds a little cat, dog, or rubber duck to your editor. They walk around while you code! 🐱",
+      "tags": ["fun", "pet"]
+    },
+    {
+      "id": "shalldie.background",
+      "name": "Background",
+      "description": "Set a custom image or GIF as your VS Code background. Make it feel personal.",
+      "tags": ["fun", "customization"]
+    },
+    {
+      "id": "icrawl.discord-vscode",
+      "name": "Discord Presence",
+      "description": "Shows what file and project you are coding in your Discord status. Flex your work.",
+      "tags": ["fun", "discord"]
+    },
+    {
+      "id": "adpyke.codesnap",
+      "name": "CodeSnap",
+      "description": "Takes beautiful screenshots of your code with syntax highlighting. Perfect for sharing online.",
+      "tags": ["fun", "sharing"]
+    },
+    {
+      "id": "hoovercj.vscode-power-mode",
+      "name": "Power Mode",
+      "description": "Your code EXPLODES with particles and combo streaks as you type. 100% optional chaos.",
+      "tags": ["fun", "effects"]
+    },
+    {
+      "id": "RobbOwen.synthwave-vscode",
+      "name": "SynthWave '84",
+      "description": "Retro neon glow effect on your syntax highlighting. Makes your code look like a sci-fi movie.",
+      "tags": ["fun", "theme"]
+    },
+    {
+      "id": "qinjia.background-cover",
+      "name": "Background Cover",
+      "description": "Full-window background image support — set any photo as your editor wallpaper.",
+      "tags": ["fun", "customization"]
+    }
+  ]
+}

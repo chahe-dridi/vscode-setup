@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Test on Node ${{ matrix.node-version }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x, 20.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Check syntax (all source files)
+        run: npm run lint
+
+      - name: Run tests
+        run: npm test
+
+      - name: Validate all category JSON files
+        run: |
+          node -e "
+            const { loadCategories, validateCategory } = require('./src/loader');
+            const cats = loadCategories();
+            let failed = false;
+            cats.forEach(cat => {
+              const { valid, errors } = validateCategory(cat);
+              if (!valid) {
+                console.error('INVALID category:', cat.id, errors);
+                failed = true;
+              } else {
+                console.log('✓', cat.id);
+              }
+            });
+            if (failed) process.exit(1);
+            console.log('All', cats.length, 'categories valid.');
+          "

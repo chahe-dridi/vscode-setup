@@ -1,0 +1,37 @@
+{
+  "id": "python",
+  "label": "🐍 Python & Data",
+  "description": "Python development, Jupyter notebooks, and data science tools",
+  "extensions": [
+    {
+      "id": "ms-python.python",
+      "name": "Python",
+      "description": "Official Python extension. IntelliSense, debugging, linting, and environment management.",
+      "tags": ["python", "essential"]
+    },
+    {
+      "id": "ms-toolsai.jupyter",
+      "name": "Jupyter",
+      "description": "Run Jupyter notebooks directly in VS Code without leaving your editor.",
+      "tags": ["python", "data", "jupyter"]
+    },
+    {
+      "id": "ms-python.black-formatter",
+      "name": "Black Formatter",
+      "description": "Auto-formats Python code using the Black style guide on save.",
+      "tags": ["python", "formatting"]
+    },
+    {
+      "id": "ms-python.pylint",
+      "name": "Pylint",
+      "description": "Lints your Python code and catches errors, warnings, and style issues.",
+      "tags": ["python", "linting"]
+    },
+    {
+      "id": "njpwerner.autodocstring",
+      "name": "autoDocstring",
+      "description": "Generates Python docstrings automatically when you type triple quotes.",
+      "tags": ["python", "productivity"]
+    }
+  ]
+}

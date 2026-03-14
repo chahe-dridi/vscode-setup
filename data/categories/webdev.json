@@ -1,0 +1,49 @@
+{
+  "id": "webdev",
+  "label": "🌐 Web Development",
+  "description": "HTML, CSS, JavaScript, React, and frontend tools",
+  "extensions": [
+    {
+      "id": "ritwickdey.LiveServer",
+      "name": "Live Server",
+      "description": "Launches a local dev server with live reload. Essential for HTML/CSS work.",
+      "tags": ["html", "css", "server"]
+    },
+    {
+      "id": "dsznajder.es7-react-js-snippets",
+      "name": "ES7+ React Snippets",
+      "description": "Shorthand snippets for React. Type 'rfce' and get a full component instantly.",
+      "tags": ["react", "snippets"]
+    },
+    {
+      "id": "bradlc.vscode-tailwindcss",
+      "name": "Tailwind CSS IntelliSense",
+      "description": "Autocomplete, hover previews, and linting for Tailwind CSS classes.",
+      "tags": ["css", "tailwind"]
+    },
+    {
+      "id": "ecmel.vscode-html-css",
+      "name": "HTML CSS Support",
+      "description": "Class and ID completion from your CSS files when writing HTML.",
+      "tags": ["html", "css"]
+    },
+    {
+      "id": "humao.rest-client",
+      "name": "REST Client",
+      "description": "Send HTTP requests directly from a .http file inside VS Code. No Postman needed.",
+      "tags": ["api", "http"]
+    },
+    {
+      "id": "ms-vscode.vscode-typescript-next",
+      "name": "TypeScript Nightly",
+      "description": "Enables the latest TypeScript features before they land in the stable release.",
+      "tags": ["typescript"]
+    },
+    {
+      "id": "Zignd.html-css-class-completion",
+      "name": "IntelliSense for CSS class names",
+      "description": "Autocompletes CSS class names in your HTML based on your project's stylesheets.",
+      "tags": ["html", "css"]
+    }
+  ]
+}

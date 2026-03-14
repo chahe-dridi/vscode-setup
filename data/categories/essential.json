@@ -1,0 +1,67 @@
+{
+  "id": "essential",
+  "label": "🚀 Essential (All Devs)",
+  "description": "Must-haves for every developer, regardless of stack",
+  "extensions": [
+    {
+      "id": "esbenp.prettier-vscode",
+      "name": "Prettier",
+      "description": "Auto-formats your code on save. Works with JS, TS, CSS, HTML, JSON and more.",
+      "tags": ["formatting", "essential"]
+    },
+    {
+      "id": "dbaeumer.vscode-eslint",
+      "name": "ESLint",
+      "description": "Highlights JavaScript/TypeScript errors and bad patterns in real time.",
+      "tags": ["linting", "essential"]
+    },
+    {
+      "id": "eamodio.gitlens",
+      "name": "GitLens",
+      "description": "See who wrote each line of code, blame annotations, and rich Git history.",
+      "tags": ["git", "essential"]
+    },
+    {
+      "id": "mhutchie.git-graph",
+      "name": "Git Graph",
+      "description": "Visual git branch tree. See all commits, merges, and branches at a glance.",
+      "tags": ["git", "essential"]
+    },
+    {
+      "id": "christian-kohler.path-intellisense",
+      "name": "Path Intellisense",
+      "description": "Autocompletes file paths as you type import statements.",
+      "tags": ["productivity", "essential"]
+    },
+    {
+      "id": "streetsidesoftware.code-spell-checker",
+      "name": "Code Spell Checker",
+      "description": "Catches spelling mistakes in your code and comments.",
+      "tags": ["productivity", "essential"]
+    },
+    {
+      "id": "usernamehw.errorlens",
+      "name": "Error Lens",
+      "description": "Shows errors and warnings inline, right next to the problematic code.",
+      "tags": ["debugging", "essential"]
+    },
+    {
+      "id": "formulahendry.auto-rename-tag",
+      "name": "Auto Rename Tag",
+      "description": "Automatically renames the matching HTML/JSX closing tag when you rename the opening one.",
+      "tags": ["html", "essential"]
+    },
+    {
+      "id": "aaron-bond.better-comments",
+      "name": "Better Comments",
+      "description": "Color-codes your comments by type: TODO, warning, question, or regular note.",
+      "tags": ["productivity", "essential"]
+    },
+    {
+      "id": "EditorConfig.EditorConfig",
+      "name": "EditorConfig",
+      "description": "Reads .editorconfig files and applies consistent formatting rules across your team.",
+      "tags": ["formatting", "essential"]
+    }
+  ]
+}

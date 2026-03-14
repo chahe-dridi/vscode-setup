@@ -1,0 +1,201 @@
+{
+  "repo": "chahe-dridi/vscode-setup",
+  "labels": [
+    { "name": "good first issue",  "color": "7057ff", "description": "Easy for first-time contributors" },
+    { "name": "extension-request", "color": "0075ca", "description": "Request to add a new extension" },
+    { "name": "new-category",      "color": "e4e669", "description": "Suggests adding a whole new category" },
+    { "name": "bug",               "color": "d73a4a", "description": "Something is broken" },
+    { "name": "enhancement",       "color": "a2eeef", "description": "New feature or improvement" },
+    { "name": "documentation",     "color": "0075ca", "description": "README, CONTRIBUTING, or docs work" },
+    { "name": "help wanted",       "color": "008672", "description": "Needs community input" },
+    { "name": "cli",               "color": "f9d0c4", "description": "CLI behavior or flags" },
+    { "name": "tests",             "color": "bfd4f2", "description": "Writing or fixing tests" },
+    { "name": "discussion",        "color": "d4c5f9", "description": "Open question or brainstorm" },
+    { "name": "refactor",          "color": "fbca04", "description": "Code cleanup, no behavior change" },
+    { "name": "performance",       "color": "0e8a16", "description": "Speed or efficiency improvement" },
+    { "name": "duplicate",         "color": "cfd3d7", "description": "This issue already exists" },
+    { "name": "wontfix",           "color": "ffffff", "description": "This will not be worked on" }
+  ],
+  "issues": [
+    {
+      "title": "[CATEGORY] Add Rust & Systems category",
+      "labels": ["good first issue", "new-category", "extension-request"],
+      "body": "## New Category: Rust & Systems\n\nRust is the most loved language on Stack Overflow for 8 years. Many devs are picking it up and need a quick VS Code setup.\n\n## Extensions to include\n\n| Name | ID | Description |\n|---|---|---|\n| Rust Analyzer | `rust-lang.rust-analyzer` | Official Rust language server |\n| Crates | `serayuzgur.crates` | Shows crate versions inline in Cargo.toml |\n| Even Better TOML | `tamasfe.even-better-toml` | Full TOML syntax support |\n| CodeLLDB | `vadimcn.vscode-lldb` | Native debugger for Rust using LLDB |\n\n## How to contribute\n\n1. Fork the repo\n2. Create `data/categories/rust.json` using the structure in CONTRIBUTING.md\n3. Add `\"rust\"` to `data/categories/index.json`\n4. Run `npm test`\n5. Open a PR"
+    },
+    {
+      "title": "[CATEGORY] Add Go Development category",
+      "labels": ["good first issue", "new-category", "extension-request"],
+      "body": "## New Category: Go Development\n\nGo is widely used for backend services, CLIs, and cloud infra. It deserves its own category.\n\n## Extensions to include\n\n| Name | ID | Description |\n|---|---|---|\n| Go | `golang.go` | Official Go extension - IntelliSense, debugging, formatting |\n| Go Test Explorer | `premparihar.gotestexplorer` | Visual test runner for Go |\n| gotemplate-syntax | `casualjim.gotemplate` | Syntax highlighting for Go HTML templates |\n\n## How to contribute\n\n1. Create `data/categories/go.json`\n2. Add `\"go\"` to `data/categories/index.json`\n3. Run `npm test`\n4. Open a PR"
+    },
+    {
+      "title": "[CATEGORY] Add Java & Spring Boot category",
+      "labels": ["new-category", "extension-request", "help wanted"],
+      "body": "## New Category: Java & Spring Boot\n\nVS Code has become a legitimate option for Java devs. We should support people coming from IntelliJ or Eclipse.\n\n## Extensions to include\n\n| Name | ID | Notes |\n|---|---|---|\n| Extension Pack for Java | `vscjava.vscode-java-pack` | Requires JDK installed |\n| Spring Boot Dashboard | `vscjava.vscode-spring-boot-dashboard` | Spring-specific tooling |\n| Lombok Annotations | `GabrielBB.vscode-lombok` | Lombok support |\n| Maven for Java | `vscjava.vscode-maven` | Maven project management |\n\n## How to contribute\n\n1. Create `data/categories/java.json`\n2. Add `\"java\"` to `data/categories/index.json`\n3. Run `npm test`\n4. Open a PR"
+    },
+    {
+      "title": "[CATEGORY] Add Mobile Development category (Flutter & React Native)",
+      "labels": ["new-category", "extension-request", "help wanted"],
+      "body": "## New Category: Mobile Development\n\nFlutter and React Native are both heavily developed in VS Code.\n\n## Extensions to consider\n\n| Name | ID | Stack |\n|---|---|---|\n| Flutter | `Dart-Code.flutter` | Flutter / Dart |\n| Dart | `Dart-Code.dart-code` | Flutter / Dart |\n| React Native Tools | `msjsdiag.vscode-react-native` | React Native |\n| Expo Tools | `expo.vscode-expo-tools` | Expo / React Native |\n\n## Help wanted\n\nIf you build mobile apps with VS Code, please verify these IDs, suggest missing extensions, and open a PR with the full category file!"
+    },
+    {
+      "title": "[CATEGORY] Add C/C++ Development category",
+      "labels": ["new-category", "extension-request"],
+      "body": "## New Category: C & C++\n\nC and C++ are still widely used for systems programming, game dev, embedded, and competitive programming.\n\n## Extensions to include\n\n| Name | ID | Description |\n|---|---|---|\n| C/C++ | `ms-vscode.cpptools` | Official Microsoft C/C++ extension |\n| C/C++ Extension Pack | `ms-vscode.cpptools-extension-pack` | Full pack including CMake tools |\n| CMake Tools | `ms-vscode.cmake-tools` | CMake project support |\n| clangd | `llvm-vs-code-extensions.vscode-clangd` | Fast C/C++ language server |\n\n## How to contribute\n\n1. Create `data/categories/cpp.json`\n2. Add `\"cpp\"` to `data/categories/index.json`\n3. Run `npm test`\n4. Open a PR"
+    },
+    {
+      "title": "[CATEGORY] Add DevOps & Cloud category",
+      "labels": ["new-category", "extension-request", "help wanted"],
+      "body": "## New Category: DevOps & Cloud\n\nKubernetes, Terraform, Ansible, and cloud tools deserve a dedicated category.\n\n## Extensions to include\n\n| Name | ID | Description |\n|---|---|---|\n| Kubernetes | `ms-kubernetes-tools.vscode-kubernetes-tools` | Manage K8s clusters from VS Code |\n| HashiCorp Terraform | `HashiCorp.terraform` | Terraform syntax, validation, autocomplete |\n| Ansible | `redhat.ansible` | Ansible playbook support |\n| AWS Toolkit | `AmazonWebServices.aws-toolkit-vscode` | AWS resource explorer |\n\n## Notes\n\nDescriptions should note which tools require a CLI installed (kubectl, terraform, aws cli)."
+    },
+    {
+      "title": "[CATEGORY] Add Testing Tools category",
+      "labels": ["new-category", "extension-request"],
+      "body": "## New Category: Testing\n\nEvery developer writes tests. We need a dedicated category for test runners and coverage tools.\n\n## Extensions to include\n\n| Name | ID | Description |\n|---|---|---|\n| Jest | `Orta.vscode-jest` | Run Jest tests automatically |\n| Vitest Explorer | `vitest.explorer` | Vitest test runner integration |\n| Playwright Test | `ms-playwright.playwright` | Run Playwright e2e tests visually |\n| Coverage Gutters | `ryanluker.vscode-coverage-gutters` | Shows code coverage in the gutter |\n\n## How to contribute\n\n1. Create `data/categories/testing.json`\n2. Add `\"testing\"` to `data/categories/index.json`\n3. Run `npm test`\n4. Open a PR"
+    },
+    {
+      "title": "[CATEGORY] Add PHP Development category",
+      "labels": ["good first issue", "new-category", "extension-request"],
+      "body": "## New Category: PHP Development\n\nPHP still powers a huge portion of the web (WordPress, Laravel, Symfony).\n\n## Extensions to include\n\n| Name | ID | Description |\n|---|---|---|\n| PHP Intelephense | `bmewburn.vscode-intelephense-client` | Fast PHP language server |\n| PHP Debug | `xdebug.php-debug` | Xdebug integration for debugging |\n| Laravel Blade Snippets | `onecentlin.laravel-blade` | Laravel Blade template support |\n| PHP Namespace Resolver | `MehediDracula.php-namespace-resolver` | Auto-imports PHP namespaces |\n\n## How to contribute\n\n1. Create `data/categories/php.json`\n2. Add `\"php\"` to `data/categories/index.json`\n3. Run `npm test`\n4. Open a PR"
+    },
+    {
+      "title": "[CATEGORY] Add Game Development category",
+      "labels": ["new-category", "extension-request", "help wanted"],
+      "body": "## New Category: Game Development\n\nUnity (C#) and Godot are both actively developed in VS Code.\n\n## Extensions to include\n\n| Name | ID | Stack |\n|---|---|---|\n| C# | `ms-dotnettools.csharp` | C# language support (needed for Unity) |\n| Unity | `visualstudiotoolsforunity.vstuc` | Unity editor integration |\n| Godot Tools | `geequlim.godot-tools` | GDScript support for Godot |\n| GLSL Lint | `cadenas.vscode-glsl` | GLSL shader syntax and linting |\n\n## Help wanted\n\nIf you develop games with VS Code, verify these IDs and add your personal must-haves."
+    },
+    {
+      "title": "[CATEGORY] Add Writing & Documentation category",
+      "labels": ["good first issue", "new-category", "extension-request"],
+      "body": "## New Category: Writing & Documentation\n\nTechnical writers, bloggers, and doc maintainers use VS Code heavily too.\n\n## Extensions to include\n\n| Name | ID | Description |\n|---|---|---|\n| Markdown All in One | `yzhang.markdown-all-in-one` | Keyboard shortcuts, TOC, preview for Markdown |\n| Markdown Preview Enhanced | `shd101wyy.markdown-preview-enhanced` | Feature-rich Markdown preview with diagrams |\n| markdownlint | `DavidAnson.vscode-markdownlint` | Lints Markdown files for style consistency |\n| MDX | `unifiedjs.vscode-mdx` | JSX inside Markdown support |\n\n## How to contribute\n\n1. Create `data/categories/writing.json`\n2. Add `\"writing\"` to `data/categories/index.json`\n3. Run `npm test`\n4. Open a PR"
+    },
+    {
+      "title": "[EXTENSION] Add more Fun & Personality extensions",
+      "labels": ["good first issue", "extension-request"],
+      "body": "## Grow the Fun & Personality category\n\nThis is one of the most popular categories. Let's expand it!\n\n## Extensions to add (pick one or more)\n\n| Name | ID | Why |\n|---|---|---|\n| Ambient Sounds | `EFanZh.any-sound` | Lo-fi or nature sounds while you code |\n| Figma for VS Code | `figma.figma-vscode-extension` | View Figma designs without leaving VS Code |\n| daily.dev | `dailydotdev.dailydevextension` | Daily developer news in a sidebar tab |\n| Pomodoro Timer | `lkytal.pomodoro-timer-for-vs-code` | Built-in Pomodoro timer in the status bar |\n\n## How to contribute\n\n1. Open `data/categories/fun.json`\n2. Add your chosen extension with a 1-sentence description\n3. Run `npm test`\n4. Open a PR"
+    },
+    {
+      "title": "[EXTENSION] Add more AI & Productivity extensions",
+      "labels": ["good first issue", "extension-request"],
+      "body": "## Grow the AI & Productivity category\n\nAI tools are evolving fast. This category should always be up to date.\n\n## Extensions to add\n\n| Name | ID | Why |\n|---|---|---|\n| Tabnine | `TabNine.tabnine-vscode` | AI code completion, free tier available |\n| Continue | `Continue.continue` | Open-source AI assistant, works with local models |\n| Mintlify Doc Writer | `mintlify.document` | Auto-generates code documentation with AI |\n\n## How to contribute\n\n1. Open `data/categories/ai.json`\n2. Verify the ID on the VS Code Marketplace\n3. Add the extension with a 1-sentence description\n4. Run `npm test`\n5. Open a PR"
+    },
+    {
+      "title": "[EXTENSION] Add more Essential extensions that every dev should have",
+      "labels": ["good first issue", "extension-request"],
+      "body": "## Grow the Essential category\n\nThis is the most important category. It should include truly universal tools.\n\n## Extensions to consider\n\n| Name | ID | Why |\n|---|---|---|\n| Live Share | `ms-vsliveshare.vsliveshare` | Real-time collaborative coding with anyone |\n| Turbo Console Log | `ChakrounAnas.turbo-console-log` | One shortcut to add a descriptive console.log |\n| Regex Previewer | `chrmarti.regex` | Shows regex matches inline as you type |\n| Project Manager | `alefragnani.project-manager` | Save and switch between projects instantly |\n| Thunder Client | `rangav.vscode-thunder-client` | Lightweight REST client built into VS Code |\n\n## How to contribute\n\n1. Open `data/categories/essential.json`\n2. Pick one extension and add it with a 1-sentence description\n3. Run `npm test`\n4. Open a PR"
+    },
+    {
+      "title": "[EXTENSION] Add more themes to the Themes & Appearance category",
+      "labels": ["good first issue", "extension-request"],
+      "body": "## More themes wanted!\n\nThe themes category is always popular. Here are candidates to add.\n\n## Themes to add\n\n| Name | ID | Style |\n|---|---|---|\n| One Dark Pro | `zhuangtongfa.Material-theme` | Atom-inspired dark theme, extremely popular |\n| Catppuccin | `Catppuccin.catppuccin-vsc` | Pastel dark theme, very trendy |\n| Gruvbox | `jdinhlife.gruvbox` | Retro warm-toned theme |\n| Ayu | `teabyii.ayu` | Simple light and dark themes |\n\n## How to contribute\n\n1. Open `data/categories/themes.json`\n2. Pick one theme from the list\n3. Add it with a 1-sentence description\n4. Run `npm test`\n5. Open a PR — one theme per PR to keep reviews focused"
+    },
+    {
+      "title": "[EXTENSION] Add Git-related extensions to Essential category",
+      "labels": ["good first issue", "extension-request"],
+      "body": "## More Git tools for the Essential category\n\nGit tools are universally needed. Here are some missing from the current list.\n\n## Extensions to add\n\n| Name | ID | Description |\n|---|---|---|\n| GitHub Pull Requests | `GitHub.vscode-pull-request-github` | Review and manage GitHub PRs directly in VS Code |\n| Conventional Commits | `vivaxy.vscode-conventional-commits` | GUI helper for writing conventional commit messages |\n| Git History | `donjayamanne.githistory` | Browse git log, file history, and compare branches |\n\n## How to contribute\n\n1. Open `data/categories/essential.json`\n2. Add one extension with a clear 1-sentence description\n3. Run `npm test`\n4. Open a PR"
+    },
+    {
+      "title": "[BUG] \"code\" CLI error message needs verification on Windows 10/11",
+      "labels": ["bug", "cli", "good first issue"],
+      "body": "## Bug: Windows error message not verified\n\nOn Windows, when `code` is not in PATH, we show instructions but nobody has confirmed they work on real Windows 10/11.\n\n## How to verify and fix\n\n1. In `src/installer.js`, find `getCodeInstallInstructions()`\n2. On a Windows machine, follow the instructions step by step\n3. If the steps are wrong or the UI has changed, update the message\n4. Open a PR with the fix\n\n## Difficulty\n\nEasy. Just verify and update a string."
+    },
+    {
+      "title": "[BUG] Crash when index.json references a category file that does not exist",
+      "labels": ["bug"],
+      "body": "## Bug: Unhelpful crash on missing category file\n\nIf someone adds an ID to `data/categories/index.json` without creating the matching file, the app crashes with a raw Node.js ENOENT error.\n\n## Steps to reproduce\n\n1. Add `\"rust\"` to `data/categories/index.json`\n2. Do NOT create `data/categories/rust.json`\n3. Run `node index.js`\n\n## Expected error\n\n```\nError: Category file not found: data/categories/rust.json\nDid you forget to create the file?\n```\n\n## Where to fix\n\n`src/loader.js` in the `loadCategory()` function - improve the thrown error message."
+    },
+    {
+      "title": "[BUG] --category flag with unknown ID shows raw JavaScript error",
+      "labels": ["bug", "cli", "good first issue"],
+      "body": "## Bug: Ugly error for unknown --category value\n\n```bash\nnode index.js --category notreal\n```\n\nCurrently shows a raw JS error. Should show:\n\n```\nUnknown category: \"notreal\"\nValid IDs: essential, themes, fun, ai, webdev, python, devtools\n```\n\n## Where to fix\n\n`index.js` - the try/catch block for the --category flag. The list of valid IDs should be read dynamically from `data/categories/index.json`."
+    },
+    {
+      "title": "[FEATURE] Add --save and --load profile flags",
+      "labels": ["enhancement", "cli"],
+      "body": "## Feature: Extension Profiles\n\nLet users save chosen extensions as a named profile and reload later.\n\n## Proposed usage\n\n```bash\nnpx vscode-setup --save my-webdev-setup\nnpx vscode-setup --load my-webdev-setup\nnpx vscode-setup --profiles\n```\n\nProfiles saved to `~/.vscode-setup/profiles/<n>.json`\n\n## Implementation plan\n\n1. Add `--save`, `--load`, `--profiles` to `src/args.js`\n2. After user selects extensions, write IDs to a JSON profile file if `--save` is set\n3. If `--load` is set, read the file and call `installExtensions()`\n4. Use `os.homedir()` + `fs.mkdirSync({ recursive: true })`\n\n## Tests needed\n\n- Flags parse correctly\n- Profile file is created with correct content\n- Loading a non-existent profile shows a helpful error"
+    },
+    {
+      "title": "[FEATURE] Add --search flag to find extensions by name or tag",
+      "labels": ["enhancement", "cli"],
+      "body": "## Feature: Extension Search\n\nLet users search all extensions without going through the full menu.\n\n## Proposed usage\n\n```bash\nnpx vscode-setup --search git\nnpx vscode-setup --search theme\n```\n\n## Expected output\n\n```\nResults for \"git\" (3 found):\n\n  1. GitLens  (eamodio.gitlens)   Essential\n  2. Git Graph  (mhutchie.git-graph)   Essential\n\nInstall any? (numbers or Enter to skip):\n```\n\n## Implementation\n\n1. Add `--search <term>` to `src/args.js`\n2. Call `getAllExtensions()` from `src/loader.js`\n3. Filter case-insensitively by name, description, or tags\n4. Display results and optionally prompt to install"
+    },
+    {
+      "title": "[FEATURE] Add --update flag to reinstall extensions from extensions.json",
+      "labels": ["enhancement", "cli"],
+      "body": "## Feature: Update / Reinstall\n\nAllow users to reinstall all extensions from an existing `.vscode/extensions.json`.\n\n## Proposed usage\n\n```bash\nnpx vscode-setup --update\nnpx vscode-setup --update --profile my-setup\n```\n\n## Why\n\nUseful after a VS Code reinstall, or when someone clones a repo that has `.vscode/extensions.json`.\n\n## Implementation\n\n1. Add `--update` to `src/args.js`\n2. Read `.vscode/extensions.json` from the current directory\n3. Pass all IDs to `installExtensions()` in `src/installer.js`\n4. Show a progress summary"
+    },
+    {
+      "title": "[FEATURE] Show extension count per category in the category picker",
+      "labels": ["enhancement", "cli", "good first issue"],
+      "body": "## Small UX improvement: show extension counts\n\nWhen choosing a category in Step 1, show how many extensions are in each one.\n\n## Current output\n\n```\n  1. Essential (All Devs)\n     Must-haves for every developer\n```\n\n## Proposed output\n\n```\n  1. Essential (All Devs)  - 10 extensions\n     Must-haves for every developer\n```\n\n## Where to fix\n\n`src/display.js` in `printCategories()`. Each category object already has an `extensions` array with a `.length` property.\n\n## Difficulty\n\nVery easy. One-line change."
+    },
+    {
+      "title": "[FEATURE] Add --no-color flag for plain output in CI environments",
+      "labels": ["enhancement", "cli"],
+      "body": "## Feature: Disable ANSI colors\n\nIn CI pipelines and some terminals, ANSI codes show as raw characters. Add a `--no-color` flag.\n\n## Proposed usage\n\n```bash\nnpx vscode-setup --list --no-color\n```\n\n## Implementation\n\n1. Add `--no-color` to `src/args.js`\n2. In `src/display.js`, export `setColors(enabled)` that replaces all color values with empty strings when disabled\n3. Also respect the `NO_COLOR` environment variable (see no-color.org)"
+    },
+    {
+      "title": "[TESTS] Add tests for display.js",
+      "labels": ["tests", "good first issue"],
+      "body": "## Missing Tests: display.js\n\n`src/display.js` handles all terminal output but has no tests.\n\n## What to test\n\nCreate `tests/display.test.js`:\n\n- Color constants contain ANSI escape codes (`\\x1b[`)\n- `printCategories()` does not throw on valid input\n- `printExtensions()` does not throw on valid input\n- `printSummary()` does not throw for all combinations\n\n## Example\n\n```js\nconst assert = require('assert');\nconst { c, printCategories } = require('../src/display');\nassert.ok(c.green.includes('\\x1b['));\nprintCategories([{ label: 'Test', description: 'desc', extensions: [] }]);\n```\n\n## Difficulty\n\nEasy. Great starting point for new contributors."
+    },
+    {
+      "title": "[TESTS] Write tests for installExtensions() with a mock",
+      "labels": ["tests", "enhancement"],
+      "body": "## Missing Tests: installExtensions()\n\n`installExtensions()` in `src/installer.js` calls the real `code` CLI. We need to test its logic with a mock.\n\n## What to test\n\n- All succeed: `installed === total`, `failed === 0`\n- All fail: `installed === 0`, `failed === total`\n- Mixed: partial counts are correct\n- `onProgress` is called once per extension\n- `results` length equals input length\n\n## Difficulty\n\nMedium. Requires mocking/stubbing a Node.js function."
+    },
+    {
+      "title": "[TESTS] Add CLI integration test for --list and --help flags",
+      "labels": ["tests", "enhancement"],
+      "body": "## Integration Test: CLI flags\n\nWe have unit tests but no test that runs the full CLI and checks output.\n\n## What to test\n\nCreate `tests/cli.test.js`:\n\n```js\nconst { execSync } = require('child_process');\nconst assert = require('assert');\n\nconst out = execSync('node index.js --list', { encoding: 'utf8' });\nassert.ok(out.includes('Prettier'));\nassert.ok(out.includes('Total:'));\n\nconst json = JSON.parse(execSync('node index.js --list --json', { encoding: 'utf8' }));\nassert.ok(Array.isArray(json) && json.length > 0);\n\nconst help = execSync('node index.js --help', { encoding: 'utf8' });\nassert.ok(help.includes('Usage'));\n```\n\n## Difficulty\n\nEasy-medium."
+    },
+    {
+      "title": "[TESTS] Add edge case tests for validateCategory()",
+      "labels": ["tests", "good first issue"],
+      "body": "## More tests for validateCategory()\n\n`validateCategory()` in `src/loader.js` is tested but edge cases are missing.\n\n## Edge cases to add\n\n- Category with zero extensions (empty array) - valid or not?\n- Extension with empty tags array `[]` - should be valid\n- Extension with extra unknown fields - should still be valid\n- Category ID with spaces - should this be caught?\n\n## How to add\n\nOpen `tests/loader.test.js` and add `assert` blocks using the existing pattern.\n\n## Difficulty\n\nEasy. No new files needed."
+    },
+    {
+      "title": "[REFACTOR] Split display.js into smaller focused modules",
+      "labels": ["refactor"],
+      "body": "## Refactor: Split display.js\n\n`src/display.js` handles colors, printing, progress, and summaries all in one file. It should be split.\n\n## Proposed structure\n\n```\nsrc/display/\n  colors.js       - ANSI constants\n  categories.js   - printCategories, printExtensions\n  progress.js     - printInstallProgress, printInstallStart\n  summary.js      - printSummary, printNoCodeWarning\n  banner.js       - banner(), divider()\n  index.js        - re-exports everything (backward-compatible)\n```\n\n## Rules\n\n- Keep same exports - no breaking changes\n- All existing tests must still pass\n- This PR should contain only this refactor - no feature additions"
+    },
+    {
+      "title": "[REFACTOR] Add JSDoc to all exported functions",
+      "labels": ["refactor", "good first issue", "documentation"],
+      "body": "## Refactor: JSDoc comments\n\nEvery exported function should have a JSDoc block. Currently they are inconsistent.\n\n## Files to update\n\n- `src/loader.js`\n- `src/installer.js`\n- `src/prompt.js`\n- `src/args.js`\n- `src/display.js`\n\n## Format\n\n```js\n/**\n * Short description.\n * @param {string} id - the category id\n * @returns {object} the category object\n * @throws {Error} if the file does not exist\n */\n```\n\n## Rules\n\n- One PR per file\n- No behavior changes - documentation only\n\n## Difficulty\n\nEasy. Great for reading and understanding the codebase."
+    },
+    {
+      "title": "[PERFORMANCE] Cache loaded categories to avoid repeated disk reads",
+      "labels": ["performance", "refactor"],
+      "body": "## Performance: In-memory cache for loadCategories()\n\n`loadCategories()` reads all JSON files from disk every time it is called. Add a simple in-memory cache.\n\n## Proposed change in src/loader.js\n\n```js\nlet _cache = null;\n\nfunction loadCategories() {\n  if (_cache) return _cache;\n  // existing logic\n  _cache = result;\n  return _cache;\n}\n\nfunction clearCache() { _cache = null; }\nmodule.exports = { ..., clearCache };\n```\n\n## Tests to add\n\n- Second call to `loadCategories()` returns the same object reference (`===`)\n- `clearCache()` causes the next call to reload from disk"
+    },
+    {
+      "title": "[DOCS] Add a terminal demo GIF to the README",
+      "labels": ["documentation", "good first issue", "help wanted"],
+      "body": "## Docs: Demo GIF\n\nThe README has a plain text demo block. A real GIF would make it much more attractive.\n\n## What we need\n\nA recording of:\n1. Running `npx vscode-setup`\n2. Picking 1-2 categories\n3. Selecting extensions\n4. Seeing install progress\n\n## Free tools\n\n- asciinema.org - records and shares as animated SVG\n- terminalizer.com - exports to GIF\n- github.com/charmbracelet/vhs - script your recording\n\n## How to contribute\n\n1. Record the demo\n2. Add to `docs/assets/demo.gif`\n3. Replace the text demo section in README.md with `![Demo](docs/assets/demo.gif)`\n4. Open a PR\n\nNo coding required!"
+    },
+    {
+      "title": "[DOCS] Add a SECURITY.md file",
+      "labels": ["documentation", "good first issue"],
+      "body": "## Docs: SECURITY.md\n\nGitHub recommends every project has a SECURITY.md for reporting vulnerabilities.\n\n## What to create\n\nCreate `SECURITY.md` at the root with:\n\n```markdown\n# Security Policy\n\n## Supported Versions\n\nOnly the latest version is actively supported.\n\n## Reporting a Vulnerability\n\nDo NOT open a public GitHub issue for security vulnerabilities.\n\nInstead use GitHub private vulnerability reporting:\nSecurity tab > Report a vulnerability.\n\nWe will respond within 48 hours.\n```\n\n## How to contribute\n\n1. Create `SECURITY.md` at the project root\n2. Open a PR\n\nVery easy. Just a Markdown file."
+    },
+    {
+      "title": "[DOCS] Write a blog post or Dev.to article about this project",
+      "labels": ["documentation", "help wanted"],
+      "body": "## Community: Write about vscode-setup\n\nA blog post is one of the best ways to grow an open-source project.\n\n## What to write about\n\n- Why this tool exists\n- How to use it (`npx vscode-setup`)\n- Your favourite extensions from each category\n- How to contribute\n\n## Where to publish\n\n- dev.to\n- hashnode.com\n- medium.com\n- Your own blog\n\n## After publishing\n\nShare the link in a comment on this issue. We will add it to the README under a Community section!"
+    },
+    {
+      "title": "[DISCUSSION] Should we show extension download counts?",
+      "labels": ["discussion", "help wanted"],
+      "body": "## Discussion: Show popularity data?\n\nShould we show extension download counts to help users choose?\n\n## Options\n\n**Option A - Manual data in JSON**\nAdd a `downloads` field to each extension, updated manually on releases.\n- Simple, no API calls, but gets stale\n\n**Option B - Live from Marketplace API**\nFetch real-time stats from the VS Code Marketplace API.\n- Always current, but requires network and adds startup time\n\n**Option C - Do not add it**\nKeep it simple. The description should sell the extension.\n\n## Vote\n\nReact to this issue:\n- +1 for Option A (manual)\n- rocket for Option B (live API)\n- -1 for Option C (skip it)\n\nComment with your reasoning!"
+    },
+    {
+      "title": "[DISCUSSION] Should we build a web UI for browsing extensions?",
+      "labels": ["discussion", "help wanted"],
+      "body": "## Discussion: Future web UI\n\nA web UI where you can browse, filter, and pick extensions - then get a one-click install command - could reach a much wider audience.\n\n## What it could look like\n\n- Browse by category with search/filter\n- Check extensions you want\n- Copy the install command or download `.vscode/extensions.json`\n- Hosted on GitHub Pages (free)\n\n## Options\n\n- Plain HTML/CSS/JS reading the category JSON files directly\n- Next.js or Astro for a more polished experience\n- GitHub Pages for free hosting\n\n## Questions\n\n1. Is a web UI worth the complexity?\n2. Same repo or separate one?\n3. Who would build it?\n\nDrop your thoughts!"
+    },
+    {
+      "title": "[DISCUSSION] What categories are missing? Vote and suggest here",
+      "labels": ["discussion", "help wanted"],
+      "body": "## Open Discussion: What is Missing?\n\nWe want to grow based on what the community actually uses.\n\n## Current categories\n\n- Essential (All Devs)\n- Themes & Appearance\n- Fun & Personality\n- AI & Productivity\n- Web Development\n- Python & Data\n- Dev Tools & Utilities\n\n## What should we add next?\n\nComment below with:\n1. Category name + emoji\n2. 2-3 must-have extensions\n3. Who it is for\n\n## Already planned\n\n- Rust & Systems\n- Go Development\n- Java & Spring Boot\n- Mobile (Flutter, React Native)\n- C & C++\n- Testing\n- DevOps & Cloud\n- Game Dev\n- Writing & Docs\n- PHP\n\nReact with +1 on comments you agree with - most upvoted get built first!"
+    }
+  ]
+}
