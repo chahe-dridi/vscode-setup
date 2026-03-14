@@ -1,6 +1,5 @@
 const assert = require("assert");
-const path = require("path");
-const { loadCategories, loadCategory, getAllExtensions, validateCategory } = require("../src/loader");
+const { loadCategories, loadCategory, getCategoryIds, getAllExtensions, validateCategory } = require("../src/loader");
 
 // ─── loadCategories ────────────────────────────────────────────────────────
 {
@@ -33,6 +32,15 @@ const { loadCategories, loadCategory, getAllExtensions, validateCategory } = req
     "should throw for unknown category"
   );
   console.log(`  ✓ loadCategory("nonexistent") — throws correctly`);
+}
+
+// ─── getCategoryIds ───────────────────────────────────────────────────────
+{
+  const ids = getCategoryIds();
+  assert.ok(Array.isArray(ids), "getCategoryIds should return an array");
+  assert.ok(ids.length > 0, "getCategoryIds should return at least one id");
+  assert.ok(ids.includes("essential"), "should include known category id: essential");
+  console.log(`  ✓ getCategoryIds — loaded ${ids.length} ids`);
 }
 
 // ─── getAllExtensions ──────────────────────────────────────────────────────
