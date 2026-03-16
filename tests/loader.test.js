@@ -89,7 +89,57 @@ const { loadCategories, loadCategory, getCategoryIds, getAllExtensions, validate
   const r2 = validateCategory(bad);
   assert.strictEqual(r2.valid, false, "invalid category should fail");
   assert.ok(r2.errors.length > 0);
-  console.log(`  ✓ validateCategory — invalid category caught ${r2.errors.length} errors`);
+  console.log( `  ✓ validateCategory — invalid category caught ${r2.errors.length} errors`);
+
+  const noExtensions = {
+    id: "no-extensions",
+    label: "No Extensions",
+    description: "Category with no extensions",
+    extensions: [],
+  };
+  const r3 = validateCategory(noExtensions);
+  assert.strictEqual( r3.valid, true, "category with no extensions should be valid");
+  assert.deepStrictEqual(r3.errors, [], "no validation errors expected");
+  console.log(`  ✓ validateCategory — category with no extensions passes`);
+
+  const extensionWithEmptyTags = {
+    id: "extension-with-empty-tags",
+    label: "🧪 Test",
+    description: "Test extension with empty tags",
+    extensions: [
+      { id: "publisher.ext", name: "Ext", description: "Does stuff", tags: [], },
+    ],
+  };
+  const r4 = validateCategory(extensionWithEmptyTags);
+  assert.strictEqual(r4.valid, true, "extension with empty tags should be valid");
+  assert.deepStrictEqual(r4.errors, [], "no validation errors expected");
+  console.log(`  ✓ validateCategory — extension with empty tags passes`);
+
+  const extraExtensionFields = {
+    id: "extension-with-extra-fields",
+    label: "🧪 Test",
+    description: "Test extension with extra unknown fields",
+    extensions: [
+      { id: "publisher.ext", name: "Ext", description: "Does stuff", tags: ["test"], extra: "unknown field", },
+    ],
+  };
+  const r5 = validateCategory(extraExtensionFields);
+  assert.strictEqual(r5.valid, true, "extension with extra unknown fields should be valid");
+  assert.deepStrictEqual(r5.errors, [], "no validation errors expected");
+  console.log(`  ✓ validateCategory — extension with extra unknown fields passes`);
+
+  const extraFieldsSpaces = {
+    id: "test-extra-fields-spaces",
+    label: "🧪 Test",
+    description: "Category with additional spaces in the fields",
+    extensions: [
+      { id: "publisher.ext   ", name: "  E  xt ", description: "  Do  es stu   ff", tags: ["ta gs  "], },
+    ],
+  };
+  const r6 = validateCategory(extraFieldsSpaces);
+  assert.strictEqual( r6.valid, true, "fields with extra spaces should still be valid");
+  assert.deepStrictEqual(r6.errors, [], "no validation errors expected");
+  console.log(`  ✓ validateCategory — fields with extra spaces are accepted`);
 }
 
 // ─── All category files are valid ─────────────────────────────────────────
