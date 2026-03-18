@@ -75,8 +75,10 @@ function validateCategory(category) {
     errors.push("'extensions' must be an array");
   } else {
     category.extensions.forEach((ext, i) => {
-      if (!ext.id || !ext.id.includes(".")) {
-        errors.push(`Extension[${i}] has invalid or missing 'id' (must contain a dot, e.g. publisher.name)`);
+      const trimmedId = typeof ext.id === "string" ? ext.id.trim() : "";
+
+      if (!trimmedId || trimmedId !== ext.id || !trimmedId.includes(".")) {
+        errors.push(`Extension[${i}] has invalid or missing 'id' (must contain a dot with no leading or trailing whitespace, e.g. publisher.name)`);
       }
       if (!ext.name || typeof ext.name !== "string") {
         errors.push(`Extension[${i}] missing 'name'`);

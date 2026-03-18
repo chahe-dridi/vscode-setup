@@ -137,9 +137,13 @@ const { loadCategories, loadCategory, getCategoryIds, getAllExtensions, validate
     ],
   };
   const r6 = validateCategory(extraFieldsSpaces);
-  assert.strictEqual( r6.valid, true, "fields with extra spaces should still be valid");
-  assert.deepStrictEqual(r6.errors, [], "no validation errors expected");
-  console.log(`  ✓ validateCategory — fields with extra spaces are accepted`);
+  assert.strictEqual(r6.valid, false, "extension ids with leading or trailing whitespace should fail validation");
+  assert.deepStrictEqual(
+    r6.errors,
+    ["Extension[0] has invalid or missing 'id' (must contain a dot with no leading or trailing whitespace, e.g. publisher.name)"],
+    "expected the invalid extension id to be reported"
+  );
+  console.log(`  ✓ validateCategory — extension ids with extra spaces are rejected`);
 }
 
 // ─── All category files are valid ─────────────────────────────────────────
