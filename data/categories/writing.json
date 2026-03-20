@@ -1,0 +1,26 @@
+{
+  "name": "Writing & Documentation",
+  "description": "Technical writers, bloggers, and doc maintainers use VS Code heavily too.",
+  "extensions": [
+    {
+      "name": "Markdown All in One",
+      "id": "yzhang.markdown-all-in-one",
+      "description": "Keyboard shortcuts, TOC, preview for Markdown"
+    },
+    {
+      "name": "Markdown Preview Enhanced",
+      "id": "shd101wyy.markdown-preview-enhanced",
+      "description": "Feature-rich Markdown preview with diagrams"
+    },
+    {
+      "name": "markdownlint",
+      "id": "DavidAnson.vscode-markdownlint",
+      "description": "Lint Markdown files for style consistency"
+    },
+    {
+      "name": "MDX",
+      "id": "unifiedjs.vscode-mdx",
+      "description": "JSX inside Markdown support"
+    }
+  ]
+}
