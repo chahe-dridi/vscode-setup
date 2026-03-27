@@ -4,9 +4,8 @@ const path = require("path");
 const os = require("os");
 const { generateExtensionsJson, getCodeInstallInstructions } = require("../src/installer");
 
-// ─── generateExtensionsJson ────────────────────────────────────────────────
+// generateExtensionsJson
 {
-  // Use a temp directory so we don't pollute the real project
   const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "vscode-setup-test-"));
   const originalCwd = process.cwd();
   process.chdir(tmpDir);
@@ -26,14 +25,13 @@ const { generateExtensionsJson, getCodeInstallInstructions } = require("../src/i
   assert.ok(contents.recommendations.includes("esbenp.prettier-vscode"));
   assert.ok(contents.recommendations.includes("dbaeumer.vscode-eslint"));
 
-  // Clean up
   process.chdir(originalCwd);
   fs.rmSync(tmpDir, { recursive: true });
 
-  console.log("  ✓ generateExtensionsJson — creates valid .vscode/extensions.json");
+  console.log("  ✓ generateExtensionsJson - creates valid .vscode/extensions.json");
 }
 
-// ─── generateExtensionsJson — creates .vscode dir if missing ──────────────
+// generateExtensionsJson - creates .vscode dir if missing
 {
   const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "vscode-setup-test-"));
   const originalCwd = process.cwd();
@@ -48,16 +46,27 @@ const { generateExtensionsJson, getCodeInstallInstructions } = require("../src/i
   process.chdir(originalCwd);
   fs.rmSync(tmpDir, { recursive: true });
 
-  console.log("  ✓ generateExtensionsJson — auto-creates .vscode directory");
+  console.log("  ✓ generateExtensionsJson - auto-creates .vscode directory");
 }
 
-// ─── getCodeInstallInstructions ────────────────────────────────────────────
+// getCodeInstallInstructions
 {
-  // We can't change process.platform but we can verify it returns a non-empty string
   const instructions = getCodeInstallInstructions();
   assert.ok(typeof instructions === "string");
   assert.ok(instructions.length > 10);
-  console.log(`  ✓ getCodeInstallInstructions — returns: "${instructions.slice(0, 50)}..."`);
+
+  if (process.platform === "win32") {
+    assert.ok(
+      instructions.includes("Add to PATH"),
+      "Windows instructions should mention adding VS Code to PATH"
+    );
+    assert.ok(
+      instructions.includes("restart your terminal"),
+      "Windows instructions should tell the user to restart the terminal"
+    );
+  }
+
+  console.log(`  ✓ getCodeInstallInstructions - returns: "${instructions.slice(0, 50)}..."`);
 }
 
 console.log("\n  All installer tests passed ✅\n");

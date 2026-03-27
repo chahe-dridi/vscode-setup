@@ -22,14 +22,10 @@ function isCodeAvailable() {
 function getCodeInstallInstructions() {
   const platform = process.platform;
   if (platform === "win32") {
-    return (
-      "Windows: Open VS Code → Ctrl+Shift+P → type 'Shell Command: Install code command in PATH' → press Enter"
-    );
+    return "Windows: Re-run the VS Code installer and enable 'Add to PATH', or add your VS Code\\bin folder to PATH manually, then restart your terminal.";
   }
   if (platform === "darwin") {
-    return (
-      "macOS: Open VS Code → Cmd+Shift+P → type 'Shell Command: Install code command in PATH' → press Enter"
-    );
+    return "macOS: Open VS Code -> Cmd+Shift+P -> type 'Shell Command: Install code command in PATH' -> press Enter";
   }
   return "Linux: Run: sudo ln -s /usr/share/code/bin/code /usr/local/bin/code";
 }
