@@ -12,6 +12,10 @@ const c = {
 
 const DIVIDER = `  ${"─".repeat(52)}`;
 
+/**
+ * Clear the terminal and print the CLI banner.
+ * @returns {void}
+ */
 function banner() {
   console.clear();
   console.log(`${c.bold}${c.blue}`);
@@ -27,10 +31,19 @@ function banner() {
   console.log(`  ${DIVIDER.trim()}\n`);
 }
 
+/**
+ * Print the standard divider line used between CLI sections.
+ * @returns {void}
+ */
 function divider() {
   console.log(DIVIDER);
 }
 
+/**
+ * Print the list of available extension categories.
+ * @param {Array<{label: string, description: string, extensions: Array}>} categories - Categories to display.
+ * @returns {void}
+ */
 function printCategories(categories) {
   categories.forEach((cat, i) => {
     console.log(`  ${c.cyan}${i + 1}${c.reset}. ${cat.label} - ${cat.extensions.length} extensions`);
@@ -40,6 +53,11 @@ function printCategories(categories) {
   console.log(`  ${c.cyan}q${c.reset}. Quit`);
 }
 
+/**
+ * Print the list of extensions for the selected category.
+ * @param {Array<{id: string, name: string, description: string}>} extensions - Extensions to display.
+ * @returns {void}
+ */
 function printExtensions(extensions) {
   extensions.forEach((ext, i) => {
     console.log(
@@ -51,6 +69,12 @@ function printExtensions(extensions) {
   console.log(`  ${c.cyan}Enter${c.reset}. Skip`);
 }
 
+/**
+ * Print the result of a completed extension installation.
+ * @param {{ name: string }} ext - Extension metadata for the item being installed.
+ * @param {{ success: boolean }} result - Installation result for the extension.
+ * @returns {void}
+ */
 function printInstallProgress(ext, result) {
   if (result.success) {
     process.stdout.write(`\r  ${c.green}✓${c.reset} ${ext.name} installed\n`);
@@ -59,10 +83,20 @@ function printInstallProgress(ext, result) {
   }
 }
 
+/**
+ * Print the start message for an extension installation.
+ * @param {{ name: string }} ext - Extension metadata for the item being installed.
+ * @returns {void}
+ */
 function printInstallStart(ext) {
   process.stdout.write(`  ${c.dim}Installing ${ext.name}...${c.reset}`);
 }
 
+/**
+ * Print the final installation summary.
+ * @param {{ installed: number, failed: number, jsonPath?: string|null }} summary - Summary data for the completed run.
+ * @returns {void}
+ */
 function printSummary({ installed, failed, jsonPath }) {
   console.log(`\n${DIVIDER}`);
   console.log(`${c.bold}${c.green}  ✅ All done!${c.reset}\n`);
@@ -74,6 +108,11 @@ function printSummary({ installed, failed, jsonPath }) {
   console.log(`  ${c.dim}Want to add extensions? Open a PR or issue!${c.reset}\n`);
 }
 
+/**
+ * Print instructions for enabling the VS Code `code` CLI command.
+ * @param {string} instructions - OS-specific setup instructions for the `code` command.
+ * @returns {void}
+ */
 function printNoCodeWarning(instructions) {
   console.log(`\n  ${c.red}⚠ "code" command not found.${c.reset}`);
   console.log(`  ${c.dim}${instructions}${c.reset}\n`);

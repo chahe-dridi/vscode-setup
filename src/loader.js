@@ -8,13 +8,7 @@ const DATA_DIR = path.join(__dirname, "..", "data", "categories");
  * @returns {Array} array of category objects
  */
 function loadCategories() {
-  const order = getCategoryIds();
-
-  return order.map((id) => {
-    const filePath = path.join(DATA_DIR, `${id}.json`);
-    const raw = fs.readFileSync(filePath, "utf8");
-    return JSON.parse(raw);
-  });
+  return getCategoryIds().map(loadCategory);
 }
 
 /**
@@ -34,11 +28,12 @@ function getCategoryIds() {
 function loadCategory(id) {
   const filePath = path.join(DATA_DIR, `${id}.json`);
   if (!fs.existsSync(filePath)) {
-    throw new Error(`Category "${id}" not found at ${filePath}`);
+    throw new Error(
+      `Category file not found: data/categories/${id}.json\nDid you forget to create the file?`
+    );
   }
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
-
 /**
  * Get all extensions as a flat array with their category label attached
  * @returns {Array}
@@ -75,8 +70,10 @@ function validateCategory(category) {
     errors.push("'extensions' must be an array");
   } else {
     category.extensions.forEach((ext, i) => {
-      if (!ext.id || !ext.id.includes(".")) {
-        errors.push(`Extension[${i}] has invalid or missing 'id' (must contain a dot, e.g. publisher.name)`);
+      const extensionId = typeof ext.id === "string" ? ext.id : "";
+
+      if (!extensionId.trim() || extensionId !== extensionId.trim() || !extensionId.includes(".")) {
+        errors.push(`Extension[${i}] has invalid or missing 'id' (must contain a dot, e.g. publisher.name, with no leading/trailing whitespace)`);
       }
       if (!ext.name || typeof ext.name !== "string") {
         errors.push(`Extension[${i}] missing 'name'`);
