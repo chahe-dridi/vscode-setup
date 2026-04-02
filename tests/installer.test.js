@@ -1,7 +1,24 @@
 const assert = require("assert");
+const childProcess = require("child_process");
 const fs = require("fs");
-const path = require("path");
 const os = require("os");
+const path = require("path");
+
+const installerPath = require.resolve("../src/installer");
+
+function loadInstallerWithExecSync(mockExecSync) {
+  const originalExecSync = childProcess.execSync;
+  delete require.cache[installerPath];
+  childProcess.execSync = mockExecSync;
+
+  try {
+    return require("../src/installer");
+  } finally {
+    childProcess.execSync = originalExecSync;
+    delete require.cache[installerPath];
+  }
+}
+
 const { generateExtensionsJson, getCodeInstallInstructions } = require("../src/installer");
 
 // generateExtensionsJson
@@ -69,4 +86,4 @@ const { generateExtensionsJson, getCodeInstallInstructions } = require("../src/i
   console.log(`  ✓ getCodeInstallInstructions - returns: "${instructions.slice(0, 50)}..."`);
 }
 
-console.log("\n  All installer tests passed ✅\n");
+console.log("\n  All installer tests passed\n");
