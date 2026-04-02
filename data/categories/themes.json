@@ -50,6 +50,12 @@
       "name": "Peacock",
       "description": "Colors each VS Code window differently per project. Essential when juggling multiple repos.",
       "tags": ["customization"]
+    },
+    {
+      "id": "Catppuccin.catppuccin-vsc",
+      "name": "Catppuccin",
+      "description": "A polished pastel theme collection with consistent dark flavors and clean contrast.",
+      "tags": ["theme"]
     }
   ]
 }
