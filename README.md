@@ -27,6 +27,10 @@ npm install -g vscode-setup
 vscode-setup
 ```
 
+## Demo
+
+![Interactive CLI demo](docs/assets/demo.gif)
+
 ---
 
 ## ⚡ CLI Flags
